@@ -9,7 +9,6 @@ import com.spring.security.response.album.DeleteAlbumResponse;
 import com.spring.security.response.album.ListAlbumResponse;
 import com.spring.security.response.album.UpdateAlbumResponse;
 import com.spring.security.service.ServiceAlbum;
-import org.hibernate.sql.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -114,5 +113,6 @@ public class ServiceAlbumImpl implements ServiceAlbum {
                 .build();
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
+
 
 }
