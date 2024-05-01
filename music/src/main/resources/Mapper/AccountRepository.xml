@@ -3,9 +3,14 @@
 <mapper namespace="com.spring.security.repository.AccountRepository">
     <select id="getAll">
         SELECT
-            *
+            `account_id`,
+            `username`,
+            `password`,
+            `gmail`,
+            LEFT(`favorite`, 256),
+            `role`
         FROM
-            ACCOUNT
+            `music`.`account`
         WHERE
             1=1;
     </select>

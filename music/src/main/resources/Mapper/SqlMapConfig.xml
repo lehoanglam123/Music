@@ -7,6 +7,8 @@
 		<typeAlias alias="Song" type="com.spring.security.model.Song" />
 		<typeAlias alias="Genre" type="com.spring.security.model.Genre" />
 		<typeAlias alias="Album" type="com.spring.security.model.Album" />
+		<typeAlias alias="Account" type="com.spring.security.model.Account" />
+		<typeAlias alias="Token" type="com.spring.security.model.Token" />
 		<typeAlias alias="SongEntity" type="com.spring.security.entity.SongEntity" />
 		<typeAlias alias="SongSearchEntity" type="com.spring.security.entity.SongSearchEntity" />
 		<typeAlias alias="ArtistEntity" type="com.spring.security.entity.ArtistEntity" />
@@ -22,6 +24,8 @@
 		<mapper resource="Mapper/SongRepository.xml" />
 		<mapper resource="Mapper/GenreRepository.xml" />
 		<mapper resource="Mapper/AlbumRepository.xml" />
+		<mapper resource="Mapper/AccountRepository.xml" />
+		<mapper resource="Mapper/TokenRepository.xml" />
 	</mappers>
 
 </configuration>
