@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/user/album")
+@RequestMapping("/api/user/album")
 @ResponseBody
 @CrossOrigin(origins = "http://localhost:3000")
 public class AlbumController {
