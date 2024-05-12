@@ -15,7 +15,7 @@ public interface AlbumRepository {
 
     Optional<Album> getAlbumByArtistIdAndName(int artistId, String albumName);
 
-    boolean insertAlbum(AlbumEntity entity);
+    int insertAlbum(AlbumEntity entity);
 
     Optional<Album> getAlbumById(int id);
 
