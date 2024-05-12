@@ -9,9 +9,8 @@
             `artist_id`,
             `album_id`,
             `release_year`,
-            `audio`,
-            `duration`,
-            `account_id`
+            LEFT(`audio`, 256),
+            `duration`
         FROM `music`.`song`
         WHERE 1=1;
     </select>
@@ -171,7 +170,7 @@
         <result property="audio" column="audio"/>
         <result property="duration" column="duration"/>
         <result property="status" column="status"/>
-        <result property="accountId" column="account_id"/>
+        <result property="status" column="account_id"/>
     </resultMap>
 
     <resultMap id="search" type="SongSearchEntity">
@@ -183,7 +182,6 @@
         <result property="releaseYear" column="release_year"/>
         <result property="audio" column="audio"/>
         <result property="duration" column="duration"/>
-        <result property="accountId" column="account_id" />
     </resultMap>
 
 </mapper>
