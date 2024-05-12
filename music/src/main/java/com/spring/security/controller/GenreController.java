@@ -10,18 +10,17 @@ import com.spring.security.response.genre.UpdateGenreResponse;
 import com.spring.security.service.ServiceGenre;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/api/admin/genre")
+@RequestMapping("/admin/genre")
 @ResponseBody
-//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:3000")
 public class GenreController {
     @Autowired
-    ServiceGenre serviceGenre;
+    private ServiceGenre serviceGenre;
 
     @GetMapping("/getAll")
     public ResponseEntity<ListGenreResponse> getAll(){

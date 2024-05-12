@@ -4,7 +4,6 @@ package com.spring.security.model;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.EnumType;
@@ -27,7 +26,7 @@ public class Account implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(role.name()));
+        return role.getAuthorities();
     }
 
     @Override
@@ -37,7 +36,7 @@ public class Account implements UserDetails {
 
     @Override
     public String getUsername() {
-        return gmail;
+        return username;
     }
 
     @Override

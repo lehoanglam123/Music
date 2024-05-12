@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
-@RequestMapping("/api/admin/song")
+@RequestMapping("/admin/song")
 @ResponseBody
 @CrossOrigin(origins = "http://localhost:3000")
 public class SongController {
