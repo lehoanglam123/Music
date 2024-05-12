@@ -13,12 +13,11 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-
 @PropertySource("classpath:application-enviroments.properties")
 @Configuration
 @ComponentScan(basePackages = {"com.spring.security.service"})
-public class AppConfig {
-	@Bean
+public class MybatisConfig {
+    @Bean
     public DriverManagerDataSource dataSource() throws IOException {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         Properties properties = new Properties();
