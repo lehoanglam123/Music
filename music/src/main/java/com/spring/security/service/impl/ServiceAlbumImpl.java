@@ -60,7 +60,8 @@ public class ServiceAlbumImpl implements ServiceAlbum {
             return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
         }
         entity.setArtistId(artistId);
-        albumRepository.insertAlbum(entity);
+        int id = albumRepository.insertAlbum(entity);
+        System.out.println(id);
         CreateAlbumResponse response = CreateAlbumResponse.builder()
                 .status("200")
                 .message("The album created successfully!")

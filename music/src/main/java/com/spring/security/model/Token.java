@@ -5,6 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -12,12 +15,9 @@ import lombok.NoArgsConstructor;
 public class Token {
     public Long id;
     public String token;
-    public TokenType tokeType;
-
+    @Enumerated(EnumType.STRING)
+    public TokenType tokenType = TokenType.BEARER;
     public boolean revoked;
-
     public boolean expired;
-
-    public Integer accountId;
-
+    public Long accountId;
 }
